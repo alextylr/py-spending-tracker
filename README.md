@@ -5,7 +5,8 @@ Spending Tracker is a script written to automate the proccess of tracking your e
 
 ## Usage 
 
-there is a sample CSV file already included in the repository, so all you have to do is run 
+There is a sample CSV file already included in the repository, so all you have to do is run
 ``` 
 python3 spending-tracker.py
 ```
+and it will output a sum of the total expenses from the CSV file
