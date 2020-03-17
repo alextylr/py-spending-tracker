@@ -6,25 +6,17 @@ checking_data = list(read_file)
 
 transactions = []
 merchants = []
-merchants_parsed = []
 
 
 for data in checking_data:
     # get all the transaction amounts + the merchants
     transactions.append(data[1])
     merchants.append(data[-1])
-for i in range(len(merchants) -1):
-    merchants[i] = merchants[i].split(' ')
-    if 'PURCHASE' in merchants[i]:   
-      merchants[i] = merchants[i][4]
 
-      print(merchants)
-# for x in range(len(transactions)-1):
-#     transactions[x] = float(transactions[x])
-      
-       
-# total_spent = sum(transactions)
+# convert all transaction amounts from strings to floats
+list_of_transactions = [float(item) for item in transactions]
 
-# print("You've spent", total_spent)
 
-print(merchants)
+
+total_spent = sum(list_of_transactions)
+print("This month Allie spent a total of $", str(total_spent), "this month! Maybe she should stop eating so much Chipotle :)")
